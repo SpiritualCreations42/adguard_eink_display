@@ -42,11 +42,30 @@ sudo apt update
 sudo apt install python3-pip python3-pil python3-requests python3-pil.imagetk
 
 2. Waveshare driver
+### 2. Install the Waveshare Python driver
 
+Download the official Waveshare e-Paper driver package:
+
+```bash
+cd ~
+wget https://www.waveshare.com/w/upload/0/0e/E-Paper-RaspberryPi-JetsonNano.zip
+unzip E-Paper-RaspberryPi-JetsonNano.zip -d ~/e-Paper
+
+This will create the folder:
+
+~/e-Paper/RaspberryPi_JetsonNano/python/lib
+Inside, locate your display’s driver file — for the 2.13″ V4 HAT+ it’s:
+
+epd2in13_V4.py
+Make sure Python can find it by adding it to your script’s import path or by running the script from that directory.
+
+Example:
+
+cd ~/e-Paper/RaspberryPi_JetsonNano/python/examples
+python3 epd_2in13_V4_test.py
 Extract the Waveshare Python driver zip to:
 
 ~/e-Paper/RaspberryPi_JetsonNano/python/lib
-
 
 Your display driver is: epd2in13_V4.py
 
