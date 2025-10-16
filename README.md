@@ -12,6 +12,8 @@ MicroSD card with Raspberry Pi OS Lite (64-bit)
 
 Wi-Fi or Ethernet for AdGuard Home
 
+'''text
+
 Connection Diagram
    ┌──────────────────────────────┐
    │     Waveshare 2.13" HAT+     │
@@ -101,6 +103,7 @@ sudo systemctl status adguard_display.service
 Mock-Up Screenshot
 
 Below is an example of how your 2.13″ HAT+ display will look after rotating 90° counter-clockwise:
+'''text
 
 +-----------------------------+
 | AdGuard IP: 192.0.2.42    |
