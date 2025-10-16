@@ -1,20 +1,19 @@
-AdGuard E-Ink Display on Raspberry Pi Zero 2 W
+# AdGuard E-Ink Display on Raspberry Pi Zero 2 W
 
 This guide walks through setting up a 2.13″ Waveshare HAT+ e-ink display to show AdGuard Home stats on a Raspberry Pi Zero 2 W running Debian Bookworm Lite.
 
-Hardware
+---
 
-Raspberry Pi Zero 2 W
+## Hardware
 
-Waveshare 2.13″ e-Paper HAT+ (V4)
+- Raspberry Pi Zero 2 W  
+- Waveshare 2.13″ e-Paper HAT+ (V4)  
+- MicroSD card with Raspberry Pi OS Lite (64-bit)  
+- Wi-Fi or Ethernet for AdGuard Home  
 
-MicroSD card with Raspberry Pi OS Lite (64-bit)
+### Connection Diagram
 
-Wi-Fi or Ethernet for AdGuard Home
-
-'''text
-
-Connection Diagram
+```text
    ┌──────────────────────────────┐
    │     Waveshare 2.13" HAT+     │
    │     (epd2in13_V4 Display)    │
@@ -34,8 +33,6 @@ Connection Diagram
    │ │ Wi-Fi → AdGuard Server   │ │
    │ └──────────────────────────┘ │
    └──────────────────────────────┘
-
-
 Connect the e-Paper HAT+ directly to the 40-pin GPIO header of the Pi Zero 2 W.
 Ensure the SPI interface is enabled in raspi-config.
 
@@ -99,11 +96,6 @@ sudo systemctl daemon-reload
 sudo systemctl enable adguard_display.service
 sudo systemctl start adguard_display.service
 sudo systemctl status adguard_display.service
-
-Mock-Up Screenshot
-
-Below is an example of how your 2.13″ HAT+ display will look after rotating 90° counter-clockwise:
-'''text
 
 +-----------------------------+
 | AdGuard IP: 192.0.2.42    |
